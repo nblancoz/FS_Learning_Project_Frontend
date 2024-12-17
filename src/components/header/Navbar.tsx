@@ -1,12 +1,10 @@
-// import { useState } from 'react';
 import Logo from '../../assets/logo/Logo';
-import { Bars3Icon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
 import useNavbarLogic from './useNavbarLogic';
 
 export default function Navbar() {
   const { navigation, search } = useNavbarLogic();
-  //   const [open, setOpen] = useState(false);
 
   return (
     <>
