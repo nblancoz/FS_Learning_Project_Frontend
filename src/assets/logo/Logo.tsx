@@ -2,9 +2,9 @@ export default function Logo() {
   return (
     <>
       <svg
-        width='200'
+        width='150'
         height='50'
-        viewBox='0 0 800 200'
+        viewBox='0 0 600 200'
         preserveAspectRatio='xMidYMid meet'
       >
         <g

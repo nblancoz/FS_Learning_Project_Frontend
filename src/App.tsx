@@ -1,9 +1,9 @@
-import Navbar from './components/header/Navbar'
+import Header from './components/header/Header'
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <Header />
     </>
   )
 }
