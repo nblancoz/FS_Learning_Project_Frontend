@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 export default function useNavbarLogic() {
-  const [isSearchVisible, SetIsSearchVisible] = useState(false);
+  const [isSearchVisible, SetIsSearchVisible] = useState(false)
 
   const toggleSearch = () => {
-    SetIsSearchVisible(!isSearchVisible);
-  };
+    SetIsSearchVisible(!isSearchVisible)
+  }
 
   const navigation = [
     {
@@ -20,7 +20,7 @@ export default function useNavbarLogic() {
       name: 'Contacto',
       href: '#',
     },
-  ];
+  ]
 
   const currencies = [
     {
@@ -33,14 +33,14 @@ export default function useNavbarLogic() {
       symbol: 'US$',
       img: 'https://restcountries.com/data/usa.svg',
     },
-  ];
+  ]
 
   const search = async (query: string) => {
     if (!query.trim()) {
-      return;
+      return
     }
-    console.log(query);
-  };
+    console.log(query)
+  }
 
-  return { isSearchVisible, toggleSearch, navigation, currencies, search };
+  return { isSearchVisible, toggleSearch, navigation, currencies, search }
 }

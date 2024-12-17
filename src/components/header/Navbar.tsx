@@ -1,10 +1,10 @@
-import Logo from '../../assets/logo/Logo';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { ShoppingBagIcon } from '@heroicons/react/24/outline';
-import useNavbarLogic from './useNavbarLogic';
+import Logo from '../../assets/logo/Logo'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { ShoppingBagIcon } from '@heroicons/react/24/outline'
+import useNavbarLogic from './useNavbarLogic'
 
 export default function Navbar() {
-  const { navigation, search } = useNavbarLogic();
+  const { navigation, search } = useNavbarLogic()
 
   return (
     <>
@@ -75,8 +75,8 @@ export default function Navbar() {
                     className='block min-w-0 grow py-1.5 pl-3 pr-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm'
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') {
-                        const query = (e.target as HTMLInputElement).value;
-                        search(query);
+                        const query = (e.target as HTMLInputElement).value
+                        search(query)
                       }
                     }}
                   />
@@ -84,8 +84,8 @@ export default function Navbar() {
                     onClick={() => {
                       const query = (
                         document.querySelector('input') as HTMLInputElement
-                      ).value;
-                      search(query);
+                      ).value
+                      search(query)
                     }}
                     className='p-1 text-gray-400 hover:text-gray-500'
                   >
@@ -114,5 +114,5 @@ export default function Navbar() {
         </nav>
       </header>
     </>
-  );
+  )
 }
