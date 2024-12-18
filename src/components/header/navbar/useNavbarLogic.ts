@@ -27,6 +27,18 @@ export default function useNavbarLogic() {
     },
   ]
 
+  const mobileNavigation = [
+    ...navigation,
+    {
+      name: 'Iniciar Sesión',
+      link: '/login',
+    },
+    {
+      name: 'Crear Cuenta',
+      link: '/register',
+    },
+  ]
+
   const currencies = [
     {
       name: 'COP',
@@ -58,6 +70,7 @@ export default function useNavbarLogic() {
     isSearchVisible,
     toggleSearch,
     navigation,
+    mobileNavigation,
     currencies,
     search,
     toggleMenu,

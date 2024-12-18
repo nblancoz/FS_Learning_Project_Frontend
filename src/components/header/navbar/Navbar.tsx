@@ -14,6 +14,7 @@ export default function Navbar() {
     isSearchVisible,
     toggleSearch,
     navigation,
+    mobileNavigation,
     // currencies,
     search,
     toggleMenu,
@@ -46,7 +47,7 @@ export default function Navbar() {
           </div>
           <MobileNavigationOptions
             isMenuOpen={isMenuOpen}
-            navigation={navigation}
+            mobileNavigation={mobileNavigation}
           />
           <MobileSearcherDropdown
             isSearchVisible={isSearchVisible}

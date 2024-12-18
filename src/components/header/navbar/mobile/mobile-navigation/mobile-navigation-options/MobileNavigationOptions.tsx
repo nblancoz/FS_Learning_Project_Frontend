@@ -2,7 +2,7 @@ import { Transition } from '@headlessui/react'
 
 interface MobileNavigationOptions {
   isMenuOpen: boolean
-  navigation: {
+  mobileNavigation: {
     name: string
     link: string
   }[]
@@ -10,7 +10,7 @@ interface MobileNavigationOptions {
 
 export default function MobileNavigationOptions({
   isMenuOpen,
-  navigation,
+  mobileNavigation,
 }: MobileNavigationOptions) {
   return (
     <>
@@ -25,7 +25,7 @@ export default function MobileNavigationOptions({
       >
         <div className='lg:hidden'>
           <div className='space-y-1 px-2 pt-2 pb-3'>
-            {navigation.map((page) => (
+            {mobileNavigation.map((page) => (
               <a
                 key={page.name}
                 href={page.link}

@@ -10,7 +10,7 @@ export default function AuthLinks() {
         </a>
         <span aria-hidden='true' className='h-6 w-px bg-gray-200' />
         <a
-          href='/create-account'
+          href='/register'
           className='text-sm font-medium text-gray-700 hover:text-gray-800'
         >
           Crear Cuenta
