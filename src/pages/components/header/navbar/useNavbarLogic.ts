@@ -20,7 +20,7 @@ export default function useNavbarLogic() {
     },
     {
       name: 'Tienda',
-      link: '/store',
+      link: '/products',
     },
     {
       name: 'Contacto',

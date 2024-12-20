@@ -1,23 +1,26 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
-import Product from '../../../../../../shared/interfaces/Products'
+import Product from '../interfaces/Products'
 
-interface MostPopularProductsCardProps {
+interface ProductsCardProps {
   products: Product[]
 }
 
-export default function MostPopularProductsCard({
-  products,
-}: MostPopularProductsCardProps) {
+export default function ProductsCard({ products }: ProductsCardProps) {
   return (
-    <>
+    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full'>
       {products.map((product) => {
         const fullStars = Math.floor(product.stars)
         const hasHalfStar = product.stars % 1 !== 0
 
         return (
           <a href={`/products/${product.id}`} key={product.id}>
-            <div className='bg-white shadow-md rounded-lg overflow-hidden'>
+            <div className='relative bg-white shadow-md rounded-lg overflow-hidden'>
+              {product.discountedPrice && (
+                <div className='absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded'>
+                  Sale!
+                </div>
+              )}
               <img
                 src={product.image}
                 alt={product.title}
@@ -48,29 +51,23 @@ export default function MostPopularProductsCard({
                     )
                   )}
                 </div>
-                <h2 className='text-lg font-bold mb-2'>{product.title}</h2>
-                <p className='text-gray-700 mb-4'>{product.description}</p>
-                <div className='flex gap-2 items-center'>
-                  {product.discountedPrice ? (
-                    <p className='text-gray-500 mb-4 line-through'>
-                      {product.originalPrice}
-                    </p>
-                  ) : (
-                    <p className='text-gray-700 mb-4'>
-                      {product.originalPrice}
-                    </p>
-                  )}
+                <h2 className='text-lg font-semibold mb-2'>{product.title}</h2>
+                <p className='text-gray-700 mb-2'>{product.description}</p>
+                <div className='flex items-center'>
                   {product.discountedPrice && (
-                    <p className='text-gray-700 mb-4'>
-                      {product.discountedPrice}
+                    <p className='text-gray-500 line-through mr-2'>
+                      {product.originalPrice}
                     </p>
                   )}
+                  <p className='text-gray-900 font-semibold'>
+                    {product.discountedPrice || product.originalPrice}
+                  </p>
                 </div>
               </div>
             </div>
           </a>
         )
       })}
-    </>
+    </div>
   )
 }

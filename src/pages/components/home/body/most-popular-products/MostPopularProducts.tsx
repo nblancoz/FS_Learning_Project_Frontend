@@ -1,7 +1,7 @@
 import useMostPopularProductsLogic from './useMostPopularProductsLogic'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import MostPopularProductsCard from './most-popular-products-card/MostPopularProductsCard'
+import ProductsCard from '../../../../../shared/products-card/ProductsCard'
 
 export default function MostPopularProducts() {
   const { products } = useMostPopularProductsLogic()
@@ -12,7 +12,7 @@ export default function MostPopularProducts() {
         LOS MÁS POPULARES
       </h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-        <MostPopularProductsCard products={products} />
+        <ProductsCard products={products} />
       </div>
       <a
         href='/products'

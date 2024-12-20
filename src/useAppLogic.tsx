@@ -8,7 +8,7 @@ export default function useAppLogic() {
 
   useEffect(() => {
     switch (location.pathname) {
-      case '/store':
+      case '/products':
         document.title = 'FortiFit | Tienda'
         break
       case '/contact':
