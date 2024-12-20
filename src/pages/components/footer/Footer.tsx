@@ -1,6 +1,6 @@
 import SocialMedia from './social-media/SocialMedia'
-import paymentOptions from '../../assets/payment-options/payment-options.png'
-import logo from '../../assets/logo/fotifit_logo.jpg'
+import paymentOptions from '../../../assets/payment-options/payment-options.png'
+import logo from '../../../assets/logo/fotifit_logo.jpg'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className='bg-black text-white p-4'>
       <div className='flex justify-between items-center'>
         <div className='hidden sm:flex items-center'>
-          <img src={logo} alt='Logo' className='h-16' />
+          <img src={logo} alt='Logo' className='h-14' />
         </div>
         <div className='flex flex-col items-center text-center flex-grow'>
           <SocialMedia />

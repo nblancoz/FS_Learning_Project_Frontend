@@ -1,10 +1,11 @@
-import ironNutritionImage from '../../../../assets/most-popular-products/iron-nutrition-creatine.png'
-import muscletechPlatinumImage from '../../../../assets/most-popular-products/muscletech-creatine.png'
-import iso100Protein5lbImage from '../../../../assets/most-popular-products/iso100-protein-5lb.png'
-import iso100Protein13lbImage from '../../../../assets/most-popular-products/iso100-protein-1.3lb.png'
+import ironNutritionImage from '../../../../../assets/most-popular-products/iron-nutrition-creatine.png'
+import muscletechPlatinumImage from '../../../../../assets/most-popular-products/muscletech-creatine.png'
+import iso100Protein5lbImage from '../../../../../assets/most-popular-products/iso100-protein-5lb.png'
+import iso100Protein13lbImage from '../../../../../assets/most-popular-products/iso100-protein-1.3lb.png'
+import Product from '../../../../../shared/interfaces/Products'
 
 export default function useMostPopularProductsLogic() {
-  const products = [
+  const products: Product[] = [
     {
       id: 1,
       stars: 5,
@@ -13,6 +14,8 @@ export default function useMostPopularProductsLogic() {
       image: ironNutritionImage,
       originalPrice: '130.000$',
       discountedPrice: '120.000$',
+      category: 'Creatinas',
+      reviews: 0,
     },
     {
       id: 2,
@@ -22,6 +25,8 @@ export default function useMostPopularProductsLogic() {
       image: muscletechPlatinumImage,
       originalPrice: '170.000$',
       discountedPrice: '155.000$',
+      category: 'Creatinas',
+      reviews: 0,
     },
     {
       id: 3,
@@ -31,6 +36,8 @@ export default function useMostPopularProductsLogic() {
       image: iso100Protein5lbImage,
       originalPrice: '450.000$',
       // discountedPrice: '387.000$',
+      category: 'Proteínas',
+      reviews: 0,
     },
     {
       id: 4,
@@ -40,6 +47,8 @@ export default function useMostPopularProductsLogic() {
       image: iso100Protein13lbImage,
       originalPrice: '210.000$',
       discountedPrice: '170.000$',
+      category: 'Proteínas',
+      reviews: 0,
     },
   ]
 

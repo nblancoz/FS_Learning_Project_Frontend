@@ -1,5 +1,5 @@
 import useNavbarLogic from './useNavbarLogic'
-import logo from '../../../assets/logo/fotifit_logo.jpg'
+import logo from '../../../../assets/logo/fotifit_logo.jpg'
 import MobileNavigationDropdown from './mobile/mobile-navigation/mobile-navigation-dropdown/MobileNavigationDropdown'
 import NavigationMenu from './navigation-menu/NavigationMenu'
 import AuthLinks from './auth-links/AuthLinks'
@@ -20,7 +20,6 @@ export default function Navbar() {
     toggleMenu,
     isMenuOpen,
     cartItemCount,
-    // setCartItemCount,
   } = useNavbarLogic()
 
   return (

@@ -1,12 +1,10 @@
+import Navigation from '../../../../../shared/interfaces/Navigation'
+
 interface NavigationMenuProps {
-  name: string
-  link: string
+  navigation: Navigation[]
 }
-export default function NavigationMenu({
-  navigation,
-}: {
-  navigation: NavigationMenuProps[]
-}) {
+
+export default function NavigationMenu({ navigation }: NavigationMenuProps) {
   return (
     <>
       <div className='hidden lg:flex lg:space-x-8 lg:ml-8'>

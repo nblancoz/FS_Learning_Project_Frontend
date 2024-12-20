@@ -1,11 +1,9 @@
 import { Transition } from '@headlessui/react'
+import Navigation from '../../../../../../../shared/interfaces/Navigation'
 
 interface MobileNavigationOptions {
   isMenuOpen: boolean
-  mobileNavigation: {
-    name: string
-    link: string
-  }[]
+  mobileNavigation: Navigation['mobileNavigation']
 }
 
 export default function MobileNavigationOptions({
@@ -25,7 +23,7 @@ export default function MobileNavigationOptions({
       >
         <div className='lg:hidden'>
           <div className='space-y-1 px-2 pt-2 pb-3'>
-            {mobileNavigation.map((page) => (
+            {mobileNavigation?.map((page) => (
               <a
                 key={page.name}
                 href={page.link}

@@ -1,16 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
+import Product from '../../../../../../shared/interfaces/Products'
 
 interface MostPopularProductsCardProps {
-  products: {
-    id: number
-    stars: number
-    title: string
-    description: string
-    image: string
-    originalPrice: string
-    discountedPrice?: string
-  }[]
+  products: Product[]
 }
 
 export default function MostPopularProductsCard({

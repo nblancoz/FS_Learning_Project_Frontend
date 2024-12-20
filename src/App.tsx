@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/header/Header'
-import HomePage from './components/home/HomePage'
-import MobileHomePage from './components/home/mobile/MobileHomePage'
-import Footer from './components/footer/Footer'
+import Header from './pages/components/header/Header'
+import HomePage from './pages/components/home/HomePage'
+import MobileHomePage from './pages/components/home/mobile/MobileHomePage'
+import Footer from './pages/components/footer/Footer'
 import useAppLogic from './useAppLogic'
 
 function App() {

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Navigation from '../../../../shared/interfaces/Navigation'
 
 export default function useNavbarLogic() {
   const [isSearchVisible, setIsSearchVisible] = useState(false)
@@ -12,7 +13,7 @@ export default function useNavbarLogic() {
     }
   }
 
-  const navigation = [
+  const navigation: Navigation[] = [
     {
       name: 'Inicio',
       link: '/',
@@ -27,7 +28,7 @@ export default function useNavbarLogic() {
     },
   ]
 
-  const mobileNavigation = [
+  const mobileNavigation: Navigation[] = [
     ...navigation,
     {
       name: 'Iniciar Sesión',
@@ -39,18 +40,18 @@ export default function useNavbarLogic() {
     },
   ]
 
-  const currencies = [
-    {
-      name: 'COP',
-      symbol: '$',
-      img: 'https://restcountries.com/data/col.svg',
-    },
-    {
-      name: 'USD',
-      symbol: 'US$',
-      img: 'https://restcountries.com/data/usa.svg',
-    },
-  ]
+  // const currencies = [
+  //   {
+  //     name: 'COP',
+  //     symbol: '$',
+  //     img: 'https://restcountries.com/data/col.svg',
+  //   },
+  //   {
+  //     name: 'USD',
+  //     symbol: 'US$',
+  //     img: 'https://restcountries.com/data/usa.svg',
+  //   },
+  // ]
 
   const search = async (query: string) => {
     if (!query.trim()) {
@@ -71,7 +72,7 @@ export default function useNavbarLogic() {
     toggleSearch,
     navigation,
     mobileNavigation,
-    currencies,
+    // currencies,
     search,
     toggleMenu,
     isMenuOpen,
