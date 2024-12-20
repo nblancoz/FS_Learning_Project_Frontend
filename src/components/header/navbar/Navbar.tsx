@@ -1,5 +1,5 @@
 import useNavbarLogic from './useNavbarLogic'
-import Logo from '../../../assets/logo/Logo'
+import logo from '../../../assets/logo/fotifit_logo.jpg'
 import MobileNavigationDropdown from './mobile/mobile-navigation/mobile-navigation-dropdown/MobileNavigationDropdown'
 import NavigationMenu from './navigation-menu/NavigationMenu'
 import AuthLinks from './auth-links/AuthLinks'
@@ -34,7 +34,7 @@ export default function Navbar() {
             />
             <div className='flex items-center justify-center flex-grow lg:flex-grow-0'>
               <a href='/' className='ml-4 lg:ml-0'>
-                <Logo />
+                <img src={logo} alt='Logo' className='h-12 object-contain' />
               </a>
             </div>
             <NavigationMenu navigation={navigation} />

@@ -8,7 +8,7 @@ export default function ShoppingBag({ cartItemCount }: ShoppingBagProps) {
   return (
     <>
       <div className='ml-4 flow-root lg:ml-6 relative'>
-        <a href='#' className='group -m-2 flex items-center p-2 relative'>
+        <a href='/cart' className='group -m-2 flex items-center p-2 relative'>
           <ShoppingBagIcon
             aria-hidden='true'
             className='h-5 w-5 shrink-0 text-gray-400 group-hover:text-gray-500'
